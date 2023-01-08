@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="../static/aligner.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RKAligner</title>
+</head>
+<body>
+  <div class="aligner__wrapper">
+    <div class="child">
+      <p class="info_text">
+        Ang RKAligner ay isang mekanismo na awtomatikong naghahanay ng mga katumbas na pangungusap 
+        ng mga wikang Cebuano at Filipino na kung saan nilalayon nitong bumuo ng parallel corpus sa 
+        nasabing mga wika para sa machine translation. Pagkatapos i-upload ang mga source at target 
+        .csv file ng mga wikang Cebuano at Filipino, awtomatiko itong magpapakita ng paghahanay ng 
+        mga katumbas na pangungusap at ang kaukulang iskor nito. Ang RKAligner ay hindi lamang naglalayong 
+        maghanay ng mga pangungusap ngunit maaari rin itong magbigay ng mga pagsasalin kung ang source file 
+        lamang ang tanging magagamit.
+      </p>
+    </div>
+    <div class="child">
+      <div class="instruction">
+        <p class="instr_text">
+          Dapat nating isaalaala na tumatanggap lamang ang 
+          RKAligner ng .csv files. Maaari mo lamang ma download 
+          ang file naglalaman ng nakahanay na mga pangugusap 
+          kapag ito ay nasuri na ng aming mga eksperto sa wika 
+          o linggwista.
+        </p>
+        <form class="align">
+          <input type="text" class="file_name" placeholder="Pangalan ng File" required>
+          <div class="input-file__wrapper" id="first_csvfile" >
+            <p>Source File</p>
+            <input onchange="handleChangeSourceFile(event, this)" name="sourceFile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" type="file" required placeholder="pumili ng file">
+            <label for="sourceFile">Pumili ng file</label>
+          </div>
+          <div class="input-file__wrapper" id="second_csvfile" >
+            <p>Target File</p>
+            <input onchange="handleChangeTargetFile(event, this)" name="targetFile" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" type="file" placeholder="upload file">
+            <label for="targetFile">Pumili ng file</label>
+          </div>
+          <button class="align__button" type="submit">IHANAY</button>
+        </form>
+        
+      </div>
+  
+</body>
+<script type="module">
+  import "../javascript/app.js";
+</script>
+</html>

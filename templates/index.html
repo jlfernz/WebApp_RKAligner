@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../static/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RKAligner</title>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+      <p class="info_text">
+        Ang RKAligner ay isang mekanismo na awtomatikong naghahanay ng mga katumbas na pangungusap 
+        ng mga wikang Cebuano at Filipino na kung saan nilalayon nitong bumuo ng parallel corpus sa 
+        nasabing mga wika para sa machine translation. Pagkatapos i-upload ang mga source at target 
+        .csv file ng mga wikang Cebuano at Filipino, awtomatiko itong magpapakita ng paghahanay ng 
+        mga katumbas na pangungusap at ang kaukulang iskor nito. Ang RKAligner ay hindi lamang naglalayong 
+        maghanay ng mga pangungusap ngunit maaari rin itong magbigay ng mga pagsasalin kung ang source file 
+        lamang ang tanging magagamit.
+      </p>
+    </div>
+    <div class="child">
+      <div class="yellow_box">
+        <form class="form" id="login">
+          <h1 class="form__title">Mag-Login</h1>
+          <div class="form__input-group">
+              <input type="email" class="form__input" autofocus placeholder="Email" required>
+              <div class="form__input-error-message"></div>
+          </div>
+          <div class="form__input-group">
+              <input type="password" class="form__input" placeholder="Password" required>
+              <div class="form__input-error-message"></div>
+          </div>
+          <button class="form__button" type="submit">Log In</button>
+          <p class="form__text">
+            Nakalimutan ang password? Maaari mong ireset
+            <a href="#" class="form__link">dito</a>.
+          </p>
+          <button  class="form__register" href="#" type="submit" id="linkCreateAccount">Mag Register</button>
+        </form>
+
+
+        <form method="post" action="/register" class="form form--hidden" id="createAccount">
+          <h1 class="form__title">Register</h1>
+          <div class="form__input-group">
+              <input type="text" id="username" name="username" class="form__input" autofocus placeholder="Username">
+          </div>
+          <div class="form__input-group">
+              <input type="email" id="email" name="email" class="form__input" placeholder="Email Address">
+          </div>
+          <div class="form__input-group">
+              <input type="password" id="password" name="password" class="form__input" placeholder="Password">
+          </div>
+          <div class="form__input-group">
+              <input type="password" id="confirmpass" name="confirmpass" class="form__input" placeholder="Confirm password">
+          </div>
+          <button class="form__input-group btn form__button" type="submit">Register</button>
+          <p class="form__text">
+              <a class="form__link" href="#" id="linkLogin">Already have an account? Sign in</a>
+          </p>
+        </form>
+
+      </div>
+      <script type="module">
+        import "../javascript/app.js";
+      </script>
+      
+    </div> 
+  </div>
+</body>
+</html>
